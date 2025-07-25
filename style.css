@@ -1,0 +1,226 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+
+/* Container padrão */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho fixo */
+header {
+  background: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+header h1 a{
+  color: #333;
+  text-decoration: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #57BBBF;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+}
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  background: #57BBBF;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #3aa1a5;
+}
+
+/* Sobre */
+.sobre {
+  padding: 5rem 0;
+  background: #f9f9f9;
+}
+.sobre-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.sobre-texto {
+  flex: 1;
+}
+.sobre-imagem {
+  flex: 1;
+}
+.sobre-imagem img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Serviços */
+.servicos {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(198, 240, 242, 0.85), rgba(198, 240, 242, 0.85)), 
+              url('https://images.pexels.com/photos/3184324/pexels-photo-3184324.jpeg') center/cover no-repeat;
+}
+.servicos h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.ver-mais {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Contato */
+.contato {
+  background: #57BBBF;
+  color: #fff;
+  padding: 5rem 0;
+}
+.contato-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contato-info {
+  flex: 1;
+}
+.formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formulario input,
+.formulario textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+.formulario textarea {
+  min-height: 120px;
+}
+.formulario button {
+  background: #fff;
+  color: #57BBBF;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.formulario button:hover {
+  background: #f2f2f2;
+}
+
+/* Rodapé */
+footer {
+  background: #f2f2f2;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #000; /* ícone preto inicialmente */
+  transition: 0.3s ease;
+  z-index: 1000;
+  border-radius: 50%;
+  display: flex;
+}
+
+.whatsapp-icon:hover {
+  color: #587C72; 
+  background-color: #25D366;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-flex,
+  .contato-flex,
+  .cards {
+    flex-direction: column;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+}
